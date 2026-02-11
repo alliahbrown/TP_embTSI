@@ -1,5 +1,7 @@
 #include <avr/io.h>
 #include <util/delay.h>
+#include <string.h>
+
 
 #define DURATION 3330
 #define LEDPIN PB4
@@ -21,9 +23,7 @@ int down() {
 
 // 	char c = '65';
 
-convert( char c) {
-
-
+void convert( char c) {
 	for (int i = 0; i<8; i++) {
 		
 		if(c & 1) {
@@ -38,6 +38,15 @@ convert( char c) {
 	}
 }
 
+
+void convert_str(char * str) {
+	
+	int end = strlen(str);
+	
+	for (int i =0; i < end ; i++) {
+		convert(str[i]);
+	}
+}
 
 
 int main () {
