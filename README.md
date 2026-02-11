@@ -57,6 +57,7 @@ XBUSB GND  → GND
 3. **compilation **
 ```bash
    make
+   make clean
    make upload
 ```
 
