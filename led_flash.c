@@ -21,23 +21,22 @@ int down() {
 
 // 	char c = '65';
 
-convert(const char c) {
+convert( char c) {
 
 
 	for (int i = 0; i<8; i++) {
 		
-		if(65 & 1) {
+		if(c & 1) {
 			up();
 			}
 		else {
 			down();
 		
 		}
+		
+		c = c >> 1;
 	}
 }
-
-
-
 
 
 
@@ -60,20 +59,7 @@ int main () {
 		
 		down();
 		
-		//  $ en ASCII
-		
-		down();
-		down();
-		
-		up();
-		
-		down();
-		down();
-		
-		up();
-		
-		down();
-		down();
+		convert(65);
 		
 		//stop 
 		
